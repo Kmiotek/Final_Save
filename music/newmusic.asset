@@ -32,3 +32,28 @@ music = {
     name = taiko_shamisen
     file = "taiko_shamisen.ogg"
 }
+
+music = {
+    name = mars
+    file = "mars.ogg"
+}
+
+music = {
+    name = funiculi_funicula
+    file = "funiculi_funicula.ogg"
+}
+
+music = {
+    name = egyptian_desert
+    file = "egyptian_desert.ogg"
+}
+
+music = {
+    name = deliver_us
+    file = "deliver_us_1.ogg"
+}
+
+music = {
+    name = katyusha
+    file = "katyusha.ogg"
+}

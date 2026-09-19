@@ -58,12 +58,10 @@ song = {
             factor = 1
             tag = MSA
         }
-        # In a war with MSA
+        # Triple chance for anyone at war with MSA
         modifier = {
-            factor = 3
-            is_at_war = {
-                participants = MSA
-            }
+            factor = 5
+            war_with = MSA
         }
         # Zero chance for everyone else
         modifier = {
@@ -71,9 +69,7 @@ song = {
             NOT = {
                 OR = {
                     tag = MSA
-                    is_at_war = {
-                        participants = MSA
-                    }
+                    war_with = MSA
                 }
             }
         }
@@ -171,14 +167,22 @@ song = {
 song = {
     name = taiko_shamisen
     chance = {
+        # JAP base chance 1
         modifier = {
             factor = 1
             tag = JAP
         }
+        # TSU base chance 1
         modifier = {
-            factor = 3
-            is_at_war = {
-                participants = JAP
+            factor = 1
+            tag = TSU
+        }
+        # Triple chance when at war with either tag
+        modifier = {
+            factor = 5
+            OR = {
+                war_with = JAP
+                war_with = TSU
             }
         }
         # Everyone else gets 0
@@ -187,9 +191,185 @@ song = {
             NOT = {
                 OR = {
                     tag = JAP
-                    is_at_war = {
-                        participants = JAP
-                    }
+                    tag = TSU
+                    war_with = JAP
+                    war_with = TSU
+                }
+            }
+        }
+    }
+}
+
+song = {
+    name = mars
+    chance = {
+        # TTS base chance 1 (passive)
+        modifier = {
+            factor = 1
+            tag = TTS
+        }
+        # ITA base chance 1 (passive)
+        modifier = {
+            factor = 1
+            tag = ITA
+        }
+        # Triple chance when at war
+        modifier = {
+            factor = 3
+            is_at_war = yes
+            OR = {
+                tag = TTS
+                tag = ITA
+            }
+        }
+        # Everyone else gets 0
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    tag = TTS
+                    tag = ITA
+                }
+            }
+        }
+    }
+}
+
+song = {
+    name = funiculi_funicula
+    chance = {
+        # Base chance: 1 for ITA
+        modifier = {
+            factor = 1
+            tag = ITA
+        }
+        # Triple chance when at war
+        modifier = {
+            factor = 3
+            tag = ITA
+            is_at_war = yes
+        }
+        # Everyone else gets 0
+        modifier = {
+            factor = 0
+            NOT = { tag = ITA }
+        }
+    }
+}
+
+song = {
+    name = egyptian_desert
+    chance = {
+        # Base chance: 1 for EGY
+        modifier = {
+            factor = 1
+            tag = EGY
+        }
+        # Double the chance while under 200 development
+        modifier = {
+            factor = 2
+            tag = EGY
+            NOT = { total_development = 200 }
+        }
+        # Everyone else gets 0
+        modifier = {
+            factor = 0
+            NOT = { tag = EGY }
+        }
+    }
+}
+
+song = {
+    name = deliver_us
+    chance = {
+        # Egypt base chance 1
+        modifier = {
+            factor = 1
+            tag = EGY
+        }
+        # Egypt at war: triple the chance
+        modifier = {
+            factor = 3
+            tag = EGY
+            is_at_war = yes
+        }
+        # Anyone at war with Egypt: base 1 so they can hear it too
+        modifier = {
+            factor = 1
+            war_with = EGY
+        }
+        # Anyone at war with Egypt: triple the chance
+        modifier = {
+            factor = 3
+            war_with = EGY
+        }
+        # Everyone else gets 0
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    tag = EGY
+                    war_with = EGY
+                }
+            }
+        }
+    }
+}
+
+song = {
+    name = katyusha
+    chance = {
+        # NOV base chance 1
+        modifier = {
+            factor = 1
+            tag = NOV
+        }
+        # RUS base chance 1
+        modifier = {
+            factor = 1
+            tag = RUS
+        }
+        # NOV at war: triple the chance
+        modifier = {
+            factor = 3
+            tag = NOV
+            is_at_war = yes
+        }
+        # RUS at war: triple the chance
+        modifier = {
+            factor = 3
+            tag = RUS
+            is_at_war = yes
+        }
+        # Anyone at war with NOV: base chance so they can hear it
+        modifier = {
+            factor = 1
+            war_with = NOV
+        }
+        # Anyone at war with NOV: triple the chance
+        modifier = {
+            factor = 3
+            war_with = NOV
+        }
+        # Anyone at war with RUS: base chance so they can hear it
+        modifier = {
+            factor = 1
+            war_with = RUS
+        }
+        # Anyone at war with RUS: triple the chance
+        modifier = {
+            factor = 3
+            war_with = RUS
+        }
+        # Everyone else gets 0
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    tag = NOV
+                    tag = RUS
+                    war_with = NOV
+                    war_with = RUS
                 }
             }
         }
