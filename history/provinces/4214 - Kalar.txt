@@ -1,14 +1,13 @@
-owner = NVK
-controller = NVK
+owner = Z1C
+controller = Z1C
 capital = "Kalar"
 is_city = yes
 culture = dynamic-nivkh-culture-num1
 religion = shinto
 trade_goods = fur
-fort_15th = yes
 base_tax = 1
 base_production = 1
 base_manpower = 1
-add_core = NVK
+add_core = Z1C
 discovered_by = chinese
 discovered_by = nomad_group
