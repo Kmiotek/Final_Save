@@ -3,8 +3,8 @@ add_government_reform = samurai_army
 government_rank = 1
 technology_group = chinese
 religion = shinto
-primary_culture = japanese
-capital = 729
+primary_culture = hokkoku
+capital = 4215
 set_country_flag = ZZZ_generated_converter_nation
 add_accepted_culture = manchu
 1444.11.11= {
@@ -16,7 +16,7 @@ add_accepted_culture = manchu
 		mil = 3
 		birth_date = 1419.12.29
 		religion = shinto
-		culture = japanese
+		culture = hokkoku
 	}
 	add_ruler_personality = obsessive_perfectionist_personality
 	add_ruler_personality = tactical_genius_personality
@@ -31,7 +31,7 @@ add_accepted_culture = manchu
 		death_date = 1476.11.3
 		female = yes
 		religion = shinto
-		culture = japanese
+		culture = hokkoku
 	}
 	add_queen_personality = intricate_web_weaver_personality
 	add_queen_personality = tolerant_personality
@@ -47,7 +47,7 @@ add_accepted_culture = manchu
 		female = yes
 		claim = 89
 		religion = shinto
-		culture = japanese
+		culture = hokkoku
 	}
 	add_heir_personality = well_connected_personality
 	add_heir_personality = zealot_personality
