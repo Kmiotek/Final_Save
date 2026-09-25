@@ -29,9 +29,11 @@ historical_units = {
 	reformed_manchu_rifle
 }
 monarch_names = {
-	"Azu Li #0" = 0
-	"Chan #0" = 0
-	"Chàniáng #0" = -1
+	"Azu Li #0" = 1
+	"Canglong #0" = 1
+	"Junhan #0" = 0
+	"Taimo #0" = 0
+	"Jiamo #0" = -1
 	"Cuìcuì #0" = -1
 	"Círén #0" = -1
 	"Císhùn #0" = -1
